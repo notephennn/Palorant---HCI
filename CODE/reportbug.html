@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Bug</title>
+    <link rel="stylesheet" href="reportbugstyle.css">
+    <link rel="icon" href="../ASSET/logocoba.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#"><img src="../ASSET/logocoba.png" alt="Logo" /></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Report Bug</h2>
+        <form id="bugReportForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <select id="server" required>
+                <option value="">Choose Server</option>
+                <option value="Asia">Asia</option>
+                <option value="Eropa">Eropa</option>
+                <option value="Amerika">Amerika</option>
+            </select>
+            <textarea id="bugDescription" rows="4" placeholder="Description Bug" required></textarea>
+            <input type="file" id="bugScreenshot" accept="image/*">
+            <div class="checkbox-container">
+                <input type="checkbox" id="followUpPermission">
+                <span>I'm agree to the terms and conditions</span>
+            </div>
+            <button type="submit">Send Report</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="../ASSET/logotextcoba.png" alt="Palorant Text Logo">
+            </div>
+            <ul class="footer-menu">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Giot Games 2025 Palorant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="reportbugscript.js"></script>
+</body>
+</html>

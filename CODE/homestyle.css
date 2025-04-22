@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #0a0e13;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: pageLoad 0.6s ease-in forwards;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: rgba(10, 14, 19, 0.9);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .nav-logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-links a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff4656;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover:before {
+    width: 100%;
+  }
+  
+  .nav-links a:hover, .nav-links a.active {
+    color: #ff4656;
+    background-color: rgba(255, 70, 86, 0.1);
+  }
+  
+/* Media Queries for Navbar */
+@media (max-width: 768px) {
+.nav-container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navbar .nav-links a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+}
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .nav-container {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        background-color: rgba(10, 14, 19, 0.95);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    /* Animation for hamburger to X */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Add overlay for background when menu is open */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+/* Header Section */
+.indexHeader {
+    background: linear-gradient(rgba(15, 25, 35, 0.7), rgba(15, 25, 35, 0.9)), url('../ASSET/bgfix.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+.indexHeader p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ece8e1;
+}
+  
+.indexHeader h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff4655;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+  
+.indexHeader a {
+    background-color: #ff4655;
+    color: #f9f9f9;
+    padding: 12px 30px;
+    border-radius: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #ff4655;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+  
+.indexHeader a:hover {
+    background-color: transparent;
+    color: #ff4655;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.3);
+}
+  
+/* Intro Section */
+.palorantIntro {
+    padding: 5rem 5%;
+    background-color: #1a242d;
+}
+  
+#intro {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: #ff4655;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+  
+.introColumn {
+    display: flex;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+  
+.introLeft, .introRight {
+    flex: 1;
+}
+  
+.introLeft h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ece8e1;
+}
+  
+.introLeft p {
+    font-size: 1.1rem;
+    color: #bdbdbd;
+    line-height: 1.8;
+}
+  
+.introLeft p span {
+    color: #ff4655;
+    font-weight: 600;
+}
+  
+.introRight video {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+  
+/* Agents Section */
+.agents {
+    padding: 5rem 5%;
+    background-color: #0f1923;
+}
+
+.kepala {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.kepala h2 {
+    font-size: 2.5rem;
+    color: #ff4655;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.kepala h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ff4655;
+}
+
+.agents-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+  
+.agent-card {
+    background-color: #1a242d;
+    border-radius: 5px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 220px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+  
+.agent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 60px 60px rgba(255, 70, 85, 0.2);
+}
+  
+.agent-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+  
+.agent-card:hover img {
+    transform: scale(1.1);
+}
+  
+.agent-card h3 {
+    color: #ece8e1;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+  
+.agent-card p {
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+  
+/* Footer */
+.footer {
+    background-color: rgba(10, 14, 19, 0.95);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-menu a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    opacity: 1;
+    color: #ff4656;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+.introColumn {
+    flex-direction: column;
+}
+
+.nav-links {
+    gap: 1.5rem;
+}
+
+.indexHeader h1 {
+    font-size: 4rem;
+}
+}
+
+@media (max-width: 768px) {
+.nav-container {
+    flex-direction: column;
+    gap: 1rem;
+}
+    
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-top {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.indexHeader h1 {
+    font-size: 3rem;
+}
+
+#intro {
+    font-size: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+.indexHeader p {
+    font-size: 1rem;
+}
+
+.indexHeader h1 {
+    font-size: 2.5rem;
+}
+
+.agent-card {
+    width: 100%;
+    max-width: 280px;
+}
+}

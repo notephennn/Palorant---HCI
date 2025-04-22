@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Palorant</title>
+    <link rel="stylesheet" href="./signup.css" />
+    <link rel="icon" href="../ASSET/logocoba.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#"><img src="../ASSET/logocoba.png" alt="Logo" /></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="signup-container">
+        <div class="signup-left">
+            <div class="signup-overlay"></div>
+        </div>
+        <div class="signup-right">
+            <div class="signup-form-container">
+                <h1>JOIN <span>PALORANT</span></h1>
+                <p class="signup-subtitle">Create your account and join the battle</p>
+                
+                <form class="signup-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="signup-button">CREATE ACCOUNT</button>
+                </form>
+                
+                <div class="signup-footer">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="../ASSET/logotextcoba.png" alt="Palorant Text Logo">
+            </div>
+            <ul class="footer-menu">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Giot Games 2025 Palorant. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

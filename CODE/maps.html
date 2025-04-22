@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="maps.css">
+    <link rel="icon" href="../ASSET/logocoba.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#"><img src="../ASSET/logocoba.png" alt="Logo" /></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="boxcontainer">
+        <div class="box Bind"><img src="../ASSET/maps11.png" alt="Bind"><span>Bind</span></div>
+        <div class="box Haven"><img src="../ASSET/maps31.png" alt="Haven"><span>Haven</span></div>
+        <div class="box Split"><img src="../ASSET/maps41.png" alt="Split"><span>Split</span></div>
+        <div class="box Ascent"><img src="../ASSET/maps51.png" alt="Ascent"><span>Ascent</span></div>
+        <div class="box Icebox"><img src="../ASSET/maps21.png" alt="Icebox"><span>Ice Box</span></div>
+    </div>
+
+    <section class="wholebox">
+        <div class="list">
+            <div class="container active">
+                <div class="maps1">
+                    <img src="../ASSET/maps11.png">
+                </div>
+                <div class="char1description">
+                    <h1 class="char1nama">Bind</h1>
+                    <div class="asset-container">
+                        <div class="asset-icons">
+                            <img src="../ASSET/binda1.png" onclick="changeAbilityImage('bind', 1)">
+                            <img src="../ASSET/binda2.png" onclick="changeAbilityImage('bind', 2)">
+                            <img src="../ASSET/binda3.png" onclick="changeAbilityImage('bind', 3)">
+                            <img src="../ASSET/binda4.png" onclick="changeAbilityImage('bind', 4)">
+                        </div>
+                        <div class="video-abilities">
+                            <img id="bindImage" src="../ASSET/binda1.png">
+                            <div class="char1info">
+                                Bind memiliki dua site dan teleport unik yang memungkinkan rotasi cepat.
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="maps1">
+                    <img src="../ASSET/maps31.png">
+                </div>
+                <div class="char1description">
+                    <h1 class="char1nama">Haven</h1>
+                    <div class="asset-container">
+                        <div class="asset-icons">
+                            <img src="../ASSET/havena1.png" onclick="changeAbilityImage('haven', 1)">
+                            <img src="../ASSET/havena2.png" onclick="changeAbilityImage('haven', 2)">
+                            <img src="../ASSET/havena3.png" onclick="changeAbilityImage('haven', 3)">
+                            <img src="../ASSET/havena4.png" onclick="changeAbilityImage('haven', 4)">
+                        </div>
+                        <div class="video-abilities">
+                            <img id="havenImage" src="../ASSET/havena1.png">
+                            <div class="char1info">
+                                Haven adalah satu-satunya map dengan tiga site, memberikan strategi yang unik.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="maps1">
+                    <img src="../ASSET/maps41.png">
+                </div>
+                <div class="char1description">
+                    <h1 class="char1nama">Split</h1>
+                    <div class="asset-container">
+                        <div class="asset-icons">
+                            <img src="../ASSET/splita1.png" onclick="changeAbilityImage('split', 1)">
+                            <img src="../ASSET/splita2.png" onclick="changeAbilityImage('split', 2)">
+                            <img src="../ASSET/splita3.png" onclick="changeAbilityImage('split', 3)">
+                            <img src="../ASSET/splita4.png" onclick="changeAbilityImage('split', 4)">
+                        </div>
+                        <div class="video-abilities">
+                            <img id="splitImage" src="../ASSET/splita1.png">
+                            <div class="char1info">
+                                Split memiliki area sempit dan zipline untuk pergerakan vertikal unik.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="maps1">
+                    <img src="../ASSET/maps51.png">
+                </div>
+                <div class="char1description">
+                    <h1 class="char1nama">Ascent</h1>
+                    <div class="asset-container">
+                        <div class="asset-icons">
+                            <img src="../ASSET/ascenta1.png" onclick="changeAbilityImage('ascent', 1)">
+                            <img src="../ASSET/ascenta2.png" onclick="changeAbilityImage('ascent', 2)">
+                            <img src="../ASSET/ascenta3.png" onclick="changeAbilityImage('ascent', 3)">
+                            <img src="../ASSET/ascenta4.png" onclick="changeAbilityImage('ascent', 4)">
+                        </div>
+                        <div class="video-abilities">
+                            <img id="ascentImage" src="../ASSET/ascenta1.png">
+                            <div class="char1info">
+                                Ascent memiliki pintu otomatis yang bisa dikontrol untuk taktik pertahanan.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="maps1">
+                    <img src="../ASSET/maps21.png">
+                </div>
+                <div class="char1description">
+                    <h1 class="char1nama">Icebox</h1>
+                    <div class="asset-container">
+                        <div class="asset-icons">
+                            <img src="../ASSET/iceboxa1.png" onclick="changeAbilityImage('icebox', 1)">
+                            <img src="../ASSET/iceboxa2.png" onclick="changeAbilityImage('icebox', 2)">
+                            <img src="../ASSET/iceboxa3.png" onclick="changeAbilityImage('icebox', 3)">
+                            <img src="../ASSET/iceboxa4.png" onclick="changeAbilityImage('icebox', 4)">
+                        </div>
+                        <div class="video-abilities">
+                            <img id="iceboxImage" src="../ASSET/iceboxa1.png">
+                            <div class="char1info">
+                                Icebox memiliki struktur kompleks dengan banyak posisi vertikal.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="../ASSET/logotextcoba.png" alt="Palorant Text Logo">
+            </div>
+            <ul class="footer-menu">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Giot Games 2025 Palorant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="mapsscript.js"></script>
+</body>
+</html>

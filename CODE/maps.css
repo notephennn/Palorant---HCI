@@ -1,0 +1,405 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #0a0e13;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: pageLoad 0.6s ease-in forwards;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: rgba(10, 14, 19, 0.9);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .nav-logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-links a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff4656;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover:before {
+    width: 100%;
+  }
+  
+  .nav-links a:hover, .nav-links a.active {
+    color: #ff4656;
+    background-color: rgba(255, 70, 86, 0.1);
+  }
+
+/* Footer */
+.footer {
+    background-color: rgba(10, 14, 19, 0.95);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-menu a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    opacity: 1;
+    color: #ff4656;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .nav-container {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        background-color: rgba(10, 14, 19, 0.95);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    /* Animation for hamburger to X */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Add overlay for background when menu is open */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .navbar .nav-links a {
+        font-size: 0.85rem;
+        padding: 5px 8px;
+    }
+    
+    .footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        height: 35px;
+    }
+
+    .footer-menu a {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+/* Maps Preview Grid */
+.boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    background-color: #1f2b38;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.box span {
+    display: block;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: #263343;
+    color: #ffffff;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 70, 85, 0.2);
+}
+
+/* Details Section */
+.wholebox {
+    padding: 2rem;
+    background-color: #121e2a;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1c2b3a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.maps1 img {
+    width: 100%;
+    height: auto;
+}
+
+.char1description {
+    padding: 1.5rem;
+}
+
+.char1nama {
+    font-size: 2rem;
+    color: #ff4655;
+    margin-bottom: 1rem;
+}
+
+.asset-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.asset-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.asset-icons img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.asset-icons img:hover {
+    transform: scale(1.1);
+    border-color: #ff4655;
+}
+
+.video-abilities img {
+    width: 400px; /* Increased from 200px */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures image maintains proportions */
+    transition: transform 0.3s ease; /* Smooth transition when image changes */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Optional: adds depth to the image */
+}
+
+/* Optional: Add hover effect to main image */
+.video-abilities img:hover {
+    transform: scale(1.02);
+}
+
+.char1info {
+    background-color: #22303f;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}

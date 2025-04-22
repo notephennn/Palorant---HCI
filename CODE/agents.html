@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Palorant agents and their unique abilities, including Phoenix, Astra, Sage, Sova, and Raze.">
+    <title>Palorant Agents | Meet The Characters</title>
+    <link rel="stylesheet" href="agentsstyle.css">
+    <link rel="icon" href="../ASSET/logocoba.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#"><img src="../ASSET/logocoba.png" alt="Logo" /></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="agent-selection">
+            <div class="boxcontainer">
+                <div class="box phoenix active" data-agent="phoenix"><img src="../ASSET/agent11.png" alt="Phoenix"><span>Phoenix</span></div>
+                <div class="box astra" data-agent="astra"><img src="../ASSET/agent21.png" alt="Astra"><span>Astra</span></div>
+                <div class="box sage" data-agent="sage"><img src="../ASSET/agent31.png" alt="Sage"><span>Sage</span></div>
+                <div class="box sova" data-agent="sova"><img src="../ASSET/agent41.png" alt="Sova"><span>Sova</span></div>
+                <div class="box raze" data-agent="raze"><img src="../ASSET/agent51.png" alt="Raze"><span>Raze</span></div>
+            </div>
+        </section>
+
+        <section class="agent-details">
+            <div class="list">
+                <!-- Phoenix Panel -->
+                <div class="container phoenix-panel active" id="phoenix-panel">
+                    <div class="character-portrait">
+                        <img src="../ASSET/agent1.png" alt="Phoenix full portrait">
+                        <div class="agent-role">Duelist</div>
+                    </div>
+                    <div class="character-details">
+                        <h1 class="character-name">Phoenix</h1>
+                        <div class="abilities-container">
+                            <div class="video-abilities">
+                                <video id="phoenixVideo" autoplay loop muted>
+                                    <source src="../ASSET/phoenix.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="character-info">
+                                    <p>Phoenix adalah duelist asal Inggris dalam game Valorant. Dia memiliki kemampuan berbasis api yang memungkinkannya untuk menyerang dan menyembuhkan dirinya sendiri. Cocok untuk pemain agresif yang suka entry fragging dan self-sustain dalam pertempuran.</p>
+                                </div>
+                            </div>
+                            <div class="abilities-icons">
+                                <button class="ability-btn active" data-ability="1" data-agent="phoenix">
+                                    <img src="../ASSET/phoenixa1.png" alt="Hot Hands">
+                                </button>
+                                <button class="ability-btn" data-ability="2" data-agent="phoenix">
+                                    <img src="../ASSET/phoenixa2.png" alt="Blaze">
+                                </button>
+                                <button class="ability-btn" data-ability="3" data-agent="phoenix">
+                                    <img src="../ASSET/phoenixa3.png" alt="Curveball">
+                                </button>
+                                <button class="ability-btn" data-ability="4" data-agent="phoenix">
+                                    <img src="../ASSET/phoenixa4.png" alt="Run It Back">
+                                </button>
+                            </div>
+                            <div class="abilities-descriptions phoenix-desc">
+                                <div class="ability-description active" data-ability="1">
+                                    <h3>Hot Hands</h3>
+                                    <p>Throws a fireball that explodes after a delay or upon impact, damaging enemies and healing Phoenix.</p>
+                                </div>
+                                <div class="ability-description" data-ability="2">
+                                    <h3>Blaze</h3>
+                                    <p>Creates a wall of fire that blocks vision and damages enemies. Can be curved while casting.</p>
+                                </div>
+                                <div class="ability-description" data-ability="3">
+                                    <h3>Curveball</h3>
+                                    <p>A flashbang that curves left or right, blinding all players who look at it.</p>
+                                </div>
+                                <div class="ability-description" data-ability="4">
+                                    <h3>Run It Back (Ultimate)</h3>
+                                    <p>Marks your current location. If you die during the ability, you are reborn at that spot with full health.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Astra Panel -->
+                <div class="container astra-panel" id="astra-panel">
+                    <div class="character-portrait">
+                        <img src="../ASSET/agent2.png" alt="Astra full portrait">
+                        <div class="agent-role">Controller</div>
+                    </div>
+                    <div class="character-details">
+                        <h1 class="character-name">Astra</h1>
+                        <div class="abilities-container">
+                            <div class="video-abilities">
+                                <video id="astraVideo" autoplay loop muted>
+                                    <source src="../ASSET/astra.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="character-info">
+                                    <p>Astra adalah Controller asal Ghana yang menggunakan kekuatan kosmik untuk mengontrol medan perang. Berbeda dari controller lainnya, Astra bermain dengan strategi tinggi, menggunakan Stars untuk membuat smoke, stun, dan gravitasi yang dapat mengontrol musuh secara maksimal.</p>
+                                </div>
+                            </div>
+                            <div class="abilities-icons">
+                                <button class="ability-btn active" data-ability="1" data-agent="astra">
+                                    <img src="../ASSET/astraa1.png" alt="Nova Pulse">
+                                </button>
+                                <button class="ability-btn" data-ability="2" data-agent="astra">
+                                    <img src="../ASSET/astraa2.png" alt="Nebula">
+                                </button>
+                                <button class="ability-btn" data-ability="3" data-agent="astra">
+                                    <img src="../ASSET/astraa3.png" alt="Gravity Well">
+                                </button>
+                                <button class="ability-btn" data-ability="4" data-agent="astra">
+                                    <img src="../ASSET/astraa4.png" alt="Astral Form">
+                                </button>
+                            </div>
+                            <div class="abilities-descriptions astra-desc">
+                                <div class="ability-description active" data-ability="1">
+                                    <h3>Nova Pulse</h3>
+                                    <p>Place stars in Astral Form, then activate to detonate a concussive nova pulse.</p>
+                                </div>
+                                <div class="ability-description" data-ability="2">
+                                    <h3>Nebula</h3>
+                                    <p>Place stars in Astral Form, then activate to transform them into smoke.</p>
+                                </div>
+                                <div class="ability-description" data-ability="3">
+                                    <h3>Gravity Well</h3>
+                                    <p>Place stars in Astral Form, then activate to form a gravity well that pulls players toward its center.</p>
+                                </div>
+                                <div class="ability-description" data-ability="4">
+                                    <h3>Astral Form / Cosmic Divide (Ultimate)</h3>
+                                    <p>Enter Astral Form to place stars, or use your Ultimate to create a cosmic wall that blocks bullets.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sage Panel -->
+                <div class="container sage-panel" id="sage-panel">
+                    <div class="character-portrait">
+                        <img src="../ASSET/agent3.png" alt="Sage full portrait">
+                        <div class="agent-role">Sentinel</div>
+                    </div>
+                    <div class="character-details">
+                        <h1 class="character-name">Sage</h1>
+                        <div class="abilities-container">
+                            <div class="video-abilities">
+                                <video id="sageVideo" autoplay loop muted>
+                                    <source src="../ASSET/sagea1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="character-info">
+                                    <p>Sage adalah Sentinel asal China yang memiliki kemampuan untuk menyembuhkan, menghidupkan kembali, dan mengontrol pergerakan musuh. Sebagai satu-satunya agent yang bisa revive rekan setim, Sage adalah pilihan yang kuat untuk tim yang membutuhkan support dan sustain dalam pertempuran.</p>
+                                </div>
+                            </div>
+                            <div class="abilities-icons">
+                                <button class="ability-btn active" data-ability="1" data-agent="sage">
+                                    <img src="../ASSET/sagea1.png" alt="Healing Orb">
+                                </button>
+                                <button class="ability-btn" data-ability="2" data-agent="sage">
+                                    <img src="../ASSET/sagea2.png" alt="Barrier Orb">
+                                </button>
+                                <button class="ability-btn" data-ability="3" data-agent="sage">
+                                    <img src="../ASSET/sagea3.png" alt="Slow Orb">
+                                </button>
+                                <button class="ability-btn" data-ability="4" data-agent="sage">
+                                    <img src="../ASSET/sagea4.png" alt="Resurrection">
+                                </button>
+                            </div>
+                            <div class="abilities-descriptions sage-desc">
+                                <div class="ability-description active" data-ability="1">
+                                    <h3>Healing Orb</h3>
+                                    <p>Heal an ally or yourself over time.</p>
+                                </div>
+                                <div class="ability-description" data-ability="2">
+                                    <h3>Barrier Orb</h3>
+                                    <p>Create a solid wall that blocks movement and can be rotated before placement.</p>
+                                </div>
+                                <div class="ability-description" data-ability="3">
+                                    <h3>Slow Orb</h3>
+                                    <p>Throw an orb that creates a slowing field when it lands.</p>
+                                </div>
+                                <div class="ability-description" data-ability="4">
+                                    <h3>Resurrection (Ultimate)</h3>
+                                    <p>Target a dead ally to bring them back to life with full health.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sova Panel -->
+                <div class="container sova-panel" id="sova-panel">
+                    <div class="character-portrait">
+                        <img src="../ASSET/agent4.png" alt="Sova full portrait">
+                        <div class="agent-role">Initiator</div>
+                    </div>
+                    <div class="character-details">
+                        <h1 class="character-name">Sova</h1>
+                        <div class="abilities-container">
+                            <div class="video-abilities">
+                                <video id="sovaVideo" autoplay loop muted>
+                                    <source src="../ASSET/sova.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="character-info">
+                                    <p>Sova adalah Initiator asal Rusia yang memiliki kemampuan untuk mengumpulkan informasi dan menandai musuh dari kejauhan. Dengan Recon Bolt, Drone, dan Hunter's Fury, Sova bisa membantu tim menemukan dan menghabisi lawan dari jauh. Jika digunakan dengan baik, Sova bisa mengontrol permainan dengan intelijen superior.</p>
+                                </div>
+                            </div>
+                            <div class="abilities-icons">
+                                <button class="ability-btn active" data-ability="1" data-agent="sova">
+                                    <img src="../ASSET/sovaa1.png" alt="Recon Bolt">
+                                </button>
+                                <button class="ability-btn" data-ability="2" data-agent="sova">
+                                    <img src="../ASSET/sovaa2.png" alt="Owl Drone">
+                                </button>
+                                <button class="ability-btn" data-ability="3" data-agent="sova">
+                                    <img src="../ASSET/sovaa3.png" alt="Shock Bolt">
+                                </button>
+                                <button class="ability-btn" data-ability="4" data-agent="sova">
+                                    <img src="../ASSET/sovaa4.png" alt="Hunter's Fury">
+                                </button>
+                            </div>
+                            <div class="abilities-descriptions sova-desc">
+                                <div class="ability-description active" data-ability="1">
+                                    <h3>Recon Bolt</h3>
+                                    <p>Fire a bolt that deploys a sonar emitter, revealing enemies in the line of sight.</p>
+                                </div>
+                                <div class="ability-description" data-ability="2">
+                                    <h3>Owl Drone</h3>
+                                    <p>Deploy a drone that can be piloted to scout and tag enemies.</p>
+                                </div>
+                                <div class="ability-description" data-ability="3">
+                                    <h3>Shock Bolt</h3>
+                                    <p>Fire an explosive bolt that damages enemies in its radius.</p>
+                                </div>
+                                <div class="ability-description" data-ability="4">
+                                    <h3>Hunter's Fury (Ultimate)</h3>
+                                    <p>Fire up to three energy blasts that penetrate walls and damage enemies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raze Panel -->
+                <div class="container raze-panel" id="raze-panel">
+                    <div class="character-portrait">
+                        <img src="../ASSET/agent5.png" alt="Raze full portrait">
+                        <div class="agent-role">Duelist</div>
+                    </div>
+                    <div class="character-details">
+                        <h1 class="character-name">Raze</h1>
+                        <div class="abilities-container">
+                            <div class="video-abilities">
+                                <video id="razeVideo" autoplay loop muted>
+                                    <source src="../ASSET/raze.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="character-info">
+                                    <p>Raze adalah Duelist asal Brasil yang memiliki gaya bermain agresif, eksplosif, dan mematikan. Dengan granat, bom peledak, dan roket raksasa, Raze bisa menghancurkan lawan dengan serangan berdaya ledak tinggi. Jika kamu suka bermain chaotic dan penuh aksi, Raze adalah pilihan yang sempurna!</p>
+                                </div>
+                            </div>
+                            <div class="abilities-icons">
+                                <button class="ability-btn active" data-ability="1" data-agent="raze">
+                                    <img src="../ASSET/razea1.png" alt="Blast Pack">
+                                </button>
+                                <button class="ability-btn" data-ability="2" data-agent="raze">
+                                    <img src="../ASSET/razea2.png" alt="Paint Shells">
+                                </button>
+                                <button class="ability-btn" data-ability="3" data-agent="raze">
+                                    <img src="../ASSET/razea3.png" alt="Boom Bot">
+                                </button>
+                                <button class="ability-btn" data-ability="4" data-agent="raze">
+                                    <img src="../ASSET/razea4.png" alt="Showstopper">
+                                </button>
+                            </div>
+                            <div class="abilities-descriptions raze-desc">
+                                <div class="ability-description active" data-ability="1">
+                                    <h3>Blast Pack</h3>
+                                    <p>Throw a satchel that sticks to surfaces and can be detonated to damage enemies or propel Raze through the air.</p>
+                                </div>
+                                <div class="ability-description" data-ability="2">
+                                    <h3>Paint Shells</h3>
+                                    <p>Throw a cluster grenade that creates smaller explosives upon detonation.</p>
+                                </div>
+                                <div class="ability-description" data-ability="3">
+                                    <h3>Boom Bot</h3>
+                                    <p>Deploy a bot that travels in a straight line and explodes when it detects enemies.</p>
+                                </div>
+                                <div class="ability-description" data-ability="4">
+                                    <h3>Showstopper (Ultimate)</h3>
+                                    <p>Equip a rocket launcher that fires a devastating explosion, dealing heavy damage in a large radius.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="../ASSET/logotextcoba.png" alt="Palorant Text Logo">
+            </div>
+            <ul class="footer-menu">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="agents.html">AGENTS</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="reportbug.html">REPORT BUG</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Giot Games 2025 Palorant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="agentsscript.js"></script>
+</body>
+</html>
